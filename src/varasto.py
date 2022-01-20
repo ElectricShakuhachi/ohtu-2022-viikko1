@@ -1,4 +1,4 @@
-class Varasto:#
+class Varasto:
     def __init__(self, tilavuus, alku_saldo = 0):
         if tilavuus > 0.0:
             self.tilavuus = tilavuus
@@ -8,7 +8,7 @@ class Varasto:#
         
         if alku_saldo < 0.0:
             # virheellinen, nollataan
-            self.saldo = -100
+            self.saldo = 0.0
         elif alku_saldo <= tilavuus:
             # mahtuu
             self.saldo = alku_saldo
