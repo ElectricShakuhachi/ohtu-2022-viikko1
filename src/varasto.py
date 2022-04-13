@@ -4,7 +4,11 @@ class Varasto:
         self.saldo = max(alku_saldo, 0.0)
         if self.saldo > self.tilavuus:
             self.saldo = self.tilavuus
-
+        elif self.tilavuus == 100:
+            print("yeah")
+        else:
+            print("juu")
+            
     # huom: ominaisuus voidaan myös laskea. Ei tarvita erillistä kenttää viela_tilaa tms..
     def paljonko_mahtuu(self):
         return self.tilavuus - self.saldo
